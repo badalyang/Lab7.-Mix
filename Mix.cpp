@@ -85,13 +85,13 @@ public:
     Mix(const string& str, int shift) : RLE(str), CaesarCipher(shift), str(str) {}
 
     string encodeMix() {
-        string rleEncoded = encode();      // RLE encoding
-        return encrypt(rleEncoded);        // Caesar Cipher encryption on RLE result
+        string rleEncoded = encode();      
+        return encrypt(rleEncoded);        
     }
 
     string decodeMix(const string& encodedText) {
-        string decrypted = decrypt(encodedText); // Decrypt using Caesar Cipher
-        return decode(decrypted);                // RLE decoding on decrypted result
+        string decrypted = decrypt(encodedText); 
+        return decode(decrypted);               
     }
 };
 
